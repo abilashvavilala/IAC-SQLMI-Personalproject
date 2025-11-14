@@ -286,8 +286,6 @@ variable "sqlmi_instances" {
     tags = optional(map(string), {})
   }))
 
-  default = {}
-
   validation {
     condition = alltrue([
       for k, v in var.sqlmi_instances :
